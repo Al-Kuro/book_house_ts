@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 interface UserProps {}
 
-const Component = styled.div``;
+const Container = styled.div``;
 
 const User: React.FC<UserProps> = () => {
-  return <Component>USER</Component>;
+  return <Container>USER</Container>;
 };
 
 export default User;

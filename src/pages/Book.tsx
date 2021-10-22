@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 interface BookProps {}
 
-const Component = styled.div``;
+const Container = styled.div``;
 
 const Book: React.FC<BookProps> = () => {
-  return <Component>BOOK</Component>;
+  return <Container>BOOK</Container>;
 };
 
 export default Book;

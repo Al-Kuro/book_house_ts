@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 interface AuthProps {}
 
-const Component = styled.div``;
+const Container = styled.div``;
 
 const Auth: React.FC<AuthProps> = () => {
-  return <Component>AUTH</Component>;
+  return <Container>AUTH</Container>;
 };
 
 export default Auth;

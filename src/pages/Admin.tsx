@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 interface AdminProps {}
 
-const Component = styled.div``;
+const Container = styled.div``;
 
 const Admin: React.FC<AdminProps> = () => {
-  return <Component>ADMIN</Component>;
+  return <Container>ADMIN</Container>;
 };
 
 export default Admin;
