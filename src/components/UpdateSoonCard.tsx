@@ -16,7 +16,8 @@ const Card = styled.div`
   }
 
   &:hover #Image {
-    max-width: 100px;
+    width: 120px;
+    height: 120px;
   }
 
   &:hover #FaceClose {
@@ -41,10 +42,17 @@ const FaceClose = styled.div`
   transform: translateY(100px);
 `;
 const ContentClose = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0.2;
   transition: 0.5s;
 `;
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100px;
+  height: 100px;
+`;
 const Title = styled.h3`
   margin: 10px 0 0;
   color: #fff;

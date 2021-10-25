@@ -8,14 +8,17 @@ import twitterIcon from "../images/icons/iconsSocialNetworks/twitterIcon.svg";
 interface FooterProps {}
 
 const Container = styled.div`
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: calc(100% - 100px);
-  height: 150px;
+  width: 80%;
+  height: 100px;
   padding: 20px 50px;
-  background: teal;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  border: 1px solid #fff;
 `;
 
 const WrapperIconMenu = styled.div`
@@ -37,7 +40,6 @@ const Wrapper = styled.div`
 `;
 
 const UrlIcon = styled.a`
-  font-size: 2em;
   color: #fff;
   margin: 0 10px;
   display: inline-block;
@@ -49,39 +51,54 @@ const UrlIcon = styled.a`
   }
 `;
 
+const IconImage = styled.img`
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+
+  :hover {
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+`;
+
 const Line = styled.span`
   font-size: 3em;
-  color: white;
+  color: #000;
   position: relative;
   top: 0;
   left: 50px;
 `;
 
-const IconImage = styled.img`
-  width: 22px;
-  height: 22px;
-`;
-
 const UrlMenu = styled.a`
-  font-size: 1.2em;
-  color: #fff;
-  margin: 0 10px;
+  font-size: 1.4em;
+  color: #000;
+  font-weight: 700;
+  padding: 10px;
   display: inline-block;
   cursor: pointer;
   transition: 0.5s;
-  opacity: 0.75;
 
   :hover {
-    opacity: 1;
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: translateY(-10px);
   }
 `;
 
 const AllRightsReserved = styled.p`
+  position: relative;
+  left: -5px;
   text-align: center;
   margin-top: 15px;
   margin-bottom: 10px;
   font-size: 1em;
-  color: #fff;
+  color: #000;
+  font-weight: 600;
 `;
 
 const Footer: React.FC<FooterProps> = () => {

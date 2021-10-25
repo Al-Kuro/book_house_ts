@@ -54,22 +54,21 @@ export const updateSoonCard = [
   {
     id: 1,
     img: bookIcon,
-    title: "Design1",
+    title: "Регистрация/Авторизация",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda voluptates corrupti, unde quidem aspernatur quia aperiam nostrum atque ab repellat omnis nemo soluta, libero tenetur, quas excepturi pariatur dignissimos!",
+      "Возможность зарегистрироваться/авторизоваться на сайте и присоединиться к нашему проекту...",
   },
   {
     id: 2,
     img: timerIcon,
-    title: "Design2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda voluptates corrupti, unde quidem aspernatur quia aperiam nostrum atque ab repellat omnis nemo soluta, libero tenetur, quas excepturi pariatur dignissimos!",
+    title: "Страница пользователя",
+    description: "Персональная страница для каждого читателя...",
   },
   {
     id: 3,
     img: speakerIcon,
-    title: "Design3",
+    title: "Список книг",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda voluptates corrupti, unde quidem aspernatur quia aperiam nostrum atque ab repellat omnis nemo soluta, libero tenetur, quas excepturi pariatur dignissimos!",
+      "Собственная книжная полка с возможность добавления/удаления книги, которую планируешь прочесть/прочитал...",
   },
 ];

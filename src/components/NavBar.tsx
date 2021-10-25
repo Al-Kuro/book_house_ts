@@ -6,28 +6,32 @@ import Logo from "../images/Logo.png";
 interface NavBarProps {}
 
 const Container = styled.header`
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
+  margin-top: 10px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 100px;
+  padding: 10px;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  border: 1px solid #fff;
 `;
 
 const Left = styled.div`
   flex: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
 `;
 
-const LogoUrl = styled.div``;
+const LogoUrl = styled.a`
+  position: relative;
+  left: -50px;
+`;
 const LogoImage = styled.img`
   max-width: 150px;
   max-height: 150px;
-  margin-left: 50px;
 `;
 
 const Center = styled.div`
@@ -35,11 +39,14 @@ const Center = styled.div`
   display: flex;
 `;
 
-const Menu = styled.nav``;
+const Menu = styled.nav`
+  position: relative;
+  left: -80px;
+`;
 const MenuLink = styled.a`
   margin: 20px 20px 20px 0;
   padding: 5px;
-  color: #fff;
+  color: #000;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -63,13 +70,14 @@ const MenuItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 200px;
+  position: relative;
+  left: -60px;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled.a`
   margin: 20px 20px 20px 0;
   padding: 5px;
-  color: #fff;
+  color: #000;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -94,16 +102,18 @@ const Input = styled.input`
   left: 0;
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: #000;
+  font-weight: 500;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   outline: none;
   border-radius: 4px;
   padding: 0 10px 0 45px;
   backdrop-filter: blur(10px);
 
   ::placeholder {
-    color: #fff;
+    color: #000;
+    font-weight: 500;
   }
 `;
 
@@ -137,8 +147,8 @@ const NavBar: React.FC<NavBarProps> = () => {
               left: "10px",
               transform: "translateY(-50%)",
               paddingRight: "10px",
-              color: "#fff",
-              borderRight: "1px solid #fff",
+              color: "#000",
+              borderRight: "1px solid #000",
             }}
           />
         </SearchContainer>
