@@ -65,7 +65,9 @@ const FaceOpen = styled.div`
   transform: translateY(-100px);
 `;
 const ContentOpen = styled.div``;
-const Description = styled.p``;
+const Description = styled.p`
+  font-size: 0.9em;
+`;
 const ReadMoreButton = styled.button`
   margin: 15px 0 0;
   display: inline-block;

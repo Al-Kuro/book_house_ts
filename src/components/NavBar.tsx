@@ -37,14 +37,17 @@ const Center = styled.div`
 
 const Menu = styled.nav``;
 const MenuLink = styled.a`
-  margin: 0 10px;
+  margin: 20px 20px 20px 0;
+  padding: 5px;
   color: #fff;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
 
   :hover {
-    color: #de0611;
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
     cursor: pointer;
   }
 `;
@@ -64,14 +67,17 @@ const MenuItemContainer = styled.div`
 `;
 
 const MenuItem = styled.div`
-  margin: 0 10px;
+  margin: 20px 20px 20px 0;
+  padding: 5px;
   color: #fff;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1px;
 
   :hover {
-    color: #de0611;
+    color: #000;
+    background: #fff;
+    border-radius: 10px;
     cursor: pointer;
   }
 `;
