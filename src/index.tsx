@@ -13,7 +13,7 @@ const Global = createGlobalStyle`
     font-family: 'Quicksand', sans-serif;
   }
   #root {
-    background: linear-gradient(180deg, #93ddec,#5cffc9,#6be182);     
+    background: linear-gradient(179deg, #2faac8,#40cc62,#bbee7d);    
     min-height: 100vh;
   }
 `;
