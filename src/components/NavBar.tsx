@@ -1,24 +1,20 @@
 import * as React from "react";
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import Badge from "@mui/material/Badge";
+import Logo from "../images/Logo.png";
 
 interface NavBarProps {}
 
-const Container = styled.div`
+const Container = styled.header`
   position: relative;
-  top: 50px;
+  top: 0;
   left: 0;
-  padding: 10px;
-  width: calc(100% - 100px);
-  background: white;
-`;
-
-const Wrapper = styled.div`
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  z-index: 100;
 `;
 
 const Left = styled.div`
@@ -26,65 +22,121 @@ const Left = styled.div`
   display: flex;
   align-items: center;
 `;
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-`;
-const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-  padding: 5px;
-`;
-const Input = styled.input`
-  border: none;
+
+const LogoUrl = styled.div``;
+const LogoImage = styled.img`
+  max-width: 150px;
+  max-height: 150px;
+  margin-left: 50px;
 `;
 
 const Center = styled.div`
   flex: 1;
-  text-align: center;
+  display: flex;
 `;
-const Logo = styled.h1`
-  font-weight: bold;
+
+const Menu = styled.nav``;
+const MenuLink = styled.a`
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  :hover {
+    color: #de0611;
+    cursor: pointer;
+  }
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 `;
+
+const MenuItemContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+`;
+
 const MenuItem = styled.div`
-  font-size: 14px;
-  cursor: pointer;
-  margin: 10px;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  :hover {
+    color: #de0611;
+    cursor: pointer;
+  }
+`;
+
+const SearchContainer = styled.div`
+  position: relative;
+  width: 300px;
+  height: 40px;
+`;
+
+const Input = styled.input`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  border-radius: 4px;
+  padding: 0 10px 0 45px;
+  backdrop-filter: blur(10px);
+
+  ::placeholder {
+    color: #fff;
+  }
 `;
 
 const NavBar: React.FC<NavBarProps> = () => {
   return (
     <Container>
-      <Wrapper>
-        <Left>
-          <Language>RU</Language>
-          <SearchContainer>
-            <Input />
-            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
-        </Left>
-        <Center>
-          <Logo>Book House</Logo>
-        </Center>
-        <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlinedIcon />
-            </Badge>
-          </MenuItem>
-        </Right>
-      </Wrapper>
+      <Left>
+        <LogoUrl>
+          <LogoImage src={Logo} />
+        </LogoUrl>
+      </Left>
+      <Center>
+        <Menu>
+          <MenuLink>Home</MenuLink>
+          <MenuLink>User</MenuLink>
+          <MenuLink>About</MenuLink>
+          <MenuLink>Contact</MenuLink>
+        </Menu>
+      </Center>
+      <Right>
+        <MenuItemContainer>
+          <MenuItem>Log in</MenuItem>
+          <MenuItem>Registration</MenuItem>
+        </MenuItemContainer>
+        <SearchContainer>
+          <Input type="text" placeholder="Search" />
+          <SearchIcon
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "10px",
+              transform: "translateY(-50%)",
+              paddingRight: "10px",
+              color: "#fff",
+              borderRight: "1px solid #fff",
+            }}
+          />
+        </SearchContainer>
+      </Right>
     </Container>
   );
 };

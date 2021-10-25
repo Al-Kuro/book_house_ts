@@ -11,24 +11,42 @@ export const bookCard = [
     img: js1,
     title: "One JS",
     author: "One JS author",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid, modi dicta atque ullam quibusdam consectetur ab dolorem blanditiis perspiciatis quo placeat repellendus reprehenderit deleniti. Animi totam soluta fugit placeat?",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
   },
   {
     id: 2,
     img: js2,
     title: "Two JS",
     author: "Two JS author",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid, modi dicta atque ullam quibusdam consectetur ab dolorem blanditiis perspiciatis quo placeat repellendus reprehenderit deleniti. Animi totam soluta fugit placeat?",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
   },
   {
     id: 3,
     img: js3,
     title: "Three JS",
     author: "Three JS author",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquid, modi dicta atque ullam quibusdam consectetur ab dolorem blanditiis perspiciatis quo placeat repellendus reprehenderit deleniti. Animi totam soluta fugit placeat?",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+  {
+    id: 4,
+    img: js1,
+    title: "Four JS",
+    author: "Four JS author",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+  {
+    id: 5,
+    img: js2,
+    title: "Five JS",
+    author: "Five JS author",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
+  },
+  {
+    id: 6,
+    img: js3,
+    title: "Six JS",
+    author: "Six JS author",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit...",
   },
 ];
 

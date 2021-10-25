@@ -11,62 +11,93 @@ interface CardBodyProps {
 
 const Card = styled.div`
   position: relative;
-  max-width: 250px;
-  height: 215px;
-  background: #fff;
-  margin: 30px 10px;
-  padding: 20px 15px;
   display: flex;
-  flex-direction: column;
-  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
+  margin: 20px 0;
 
-  :hover {
-    height: 420px;
+  &:hover #Image {
+    max-width: 100%;
   }
-  &:hover #ContentContainer {
-    visibility: visible;
-    opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
+
+  &:hover #FaceClose {
+    transform: translateX(0);
+  }
+
+  &:hover #FaceOpen {
+    transform: translateX(0);
   }
 `;
 
-const ImgContainer = styled.div`
+const FaceClose = styled.div`
+  width: 150px;
+  height: 220px;
+  transition: 0.5s;
   position: relative;
-  width: 230px;
-  height: 260px;
-  top: -60px;
-  left: -5px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transform: translateX(75px);
+`;
+
+const ContentClose = styled.div`
+  transition: 0.5s;
 `;
 
 const Image = styled.img`
-  position: relative;
-  top: 0;
-  left: 35px;
-  width: 160px;
+  width: 150px;
   height: 220px;
-  border-radius: 4px;
 `;
 
-const ContentContainer = styled.div`
+const FaceOpen = styled.div`
+  width: 150px;
+  height: 220px;
+  transition: 0.5s;
   position: relative;
-  margin-top: -140px;
-  padding: 10px 15px;
-  text-align: center;
-  color: #111;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateX(-75px);
 `;
 
-const Title = styled.h1``;
+const ContentOpen = styled.div``;
 
-const Author = styled.h2``;
+const Title = styled.h3`
+  color: #000;
+  text-align: center;
+  font-size: 1.5em;
+`;
 
-const Description = styled.p``;
+const Author = styled.h4`
+  margin: 3px 0;
+  text-align: center;
+`;
+
+const Description = styled.p`
+  margin: 3px 0;
+  text-align: center;
+  font-size: 0.9em;
+`;
+
+const ReadMoreButton = styled.button`
+  display: inline-block;
+  font-weight: 900;
+  color: #333;
+  position: relative;
+  top: 10px;
+  left: 14px;
+  padding: 5px;
+  border: 1px solid #333;
+
+  :hover {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+`;
 
 const CardBody: React.FC<CardBodyProps> = ({
   img,
@@ -76,14 +107,19 @@ const CardBody: React.FC<CardBodyProps> = ({
 }: CardBodyProps) => {
   return (
     <Card>
-      <ImgContainer>
-        <Image src={img} />
-      </ImgContainer>
-      <ContentContainer id="ContentContainer">
-        <Title>{title}</Title>
-        <Author>{author}</Author>
-        <Description>{description}</Description>
-      </ContentContainer>
+      <FaceClose id="FaceClose">
+        <ContentClose id="ContentClose">
+          <Image src={img} id="Image" />
+        </ContentClose>
+      </FaceClose>
+      <FaceOpen id="FaceOpen">
+        <ContentOpen>
+          <Title>{title}</Title>
+          <Author>{author}</Author>
+          <Description>{description}</Description>
+          <ReadMoreButton>Read More</ReadMoreButton>
+        </ContentOpen>
+      </FaceOpen>
     </Card>
   );
 };

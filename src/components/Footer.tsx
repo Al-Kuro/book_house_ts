@@ -55,7 +55,6 @@ const Line = styled.span`
   position: relative;
   top: 0;
   left: 50px;
-  margin-left: 20px;
 `;
 
 const IconImage = styled.img`

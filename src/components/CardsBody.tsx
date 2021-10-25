@@ -6,15 +6,11 @@ import CardBody from "./CardBody";
 interface CardsBodyProps {}
 
 const Container = styled.div`
-  margin-top: 100px;
+  margin-top: 50px;
+  width: 70%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  background: #16384c;
-  width: 80%;
-  height: 400px;
-  padding: 30px;
+  justify-content: center;
 `;
 
 const CardsBody: React.FC<CardsBodyProps> = () => {
