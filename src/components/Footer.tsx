@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 import facebookIcon from "../images/icons/iconsSocialNetworks/facebookIcon.svg";
 import instagramIcon from "../images/icons/iconsSocialNetworks/instagramIcon.svg";
@@ -101,7 +101,7 @@ const AllRightsReserved = styled.p`
   font-weight: 600;
 `;
 
-const Footer: React.FC<FooterProps> = () => {
+const Footer: FC<FooterProps> = () => {
   return (
     <Container>
       <WrapperIconMenu>

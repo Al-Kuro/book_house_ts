@@ -1,11 +1,11 @@
-import * as React from "react";
+import React, { FC } from "react";
 import { Redirect, Route, Switch } from "react-router";
 import { authRoutes, publicRoutes } from "../routes";
 import { HOME_ROUTE } from "../utils/consts";
 
 interface AppRouterProps {}
 
-const AppRouter: React.FC<AppRouterProps> = () => {
+const AppRouter: FC<AppRouterProps> = () => {
   const isAuth = false;
   return (
     <Switch>

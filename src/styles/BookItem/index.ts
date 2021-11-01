@@ -1,15 +1,6 @@
-import * as React from "react";
 import styled from "styled-components";
 
-interface CardBodyProps {
-  book: {};
-  img: string;
-  title: string;
-  author: string;
-  description: string;
-}
-
-const Card = styled.div`
+export const Card = styled.div`
   position: relative;
   display: flex;
   margin: 20px 0;
@@ -27,7 +18,7 @@ const Card = styled.div`
   }
 `;
 
-const FaceClose = styled.div`
+export const FaceClose = styled.div`
   width: 150px;
   height: 220px;
   transition: 0.5s;
@@ -40,16 +31,16 @@ const FaceClose = styled.div`
   transform: translateX(75px);
 `;
 
-const ContentClose = styled.div`
+export const ContentClose = styled.div`
   transition: 0.5s;
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 150px;
   height: 220px;
 `;
 
-const FaceOpen = styled.div`
+export const FaceOpen = styled.div`
   width: 150px;
   height: 220px;
   transition: 0.5s;
@@ -63,26 +54,26 @@ const FaceOpen = styled.div`
   transform: translateX(-75px);
 `;
 
-const ContentOpen = styled.div``;
+export const ContentOpen = styled.div``;
 
-const Title = styled.h3`
+export const Title = styled.h3`
   color: #000;
   text-align: center;
   font-size: 1.5em;
 `;
 
-const Author = styled.h4`
+export const Author = styled.h4`
   margin: 3px 0;
   text-align: center;
 `;
 
-const Description = styled.p`
+export const Description = styled.p`
   margin: 3px 0;
   text-align: center;
   font-size: 0.9em;
 `;
 
-const ReadMoreButton = styled.button`
+export const ReadMoreButton = styled.button`
   display: inline-block;
   font-weight: 900;
   color: #333;
@@ -98,30 +89,3 @@ const ReadMoreButton = styled.button`
     cursor: pointer;
   }
 `;
-
-const CardBody: React.FC<CardBodyProps> = ({
-  img,
-  title,
-  author,
-  description,
-}: CardBodyProps) => {
-  return (
-    <Card>
-      <FaceClose id="FaceClose">
-        <ContentClose id="ContentClose">
-          <Image src={img} id="Image" />
-        </ContentClose>
-      </FaceClose>
-      <FaceOpen id="FaceOpen">
-        <ContentOpen>
-          <Title>{title}</Title>
-          <Author>{author}</Author>
-          <Description>{description}</Description>
-          <ReadMoreButton>Read More</ReadMoreButton>
-        </ContentOpen>
-      </FaceOpen>
-    </Card>
-  );
-};
-
-export default CardBody;

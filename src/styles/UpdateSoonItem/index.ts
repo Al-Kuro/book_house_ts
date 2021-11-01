@@ -1,15 +1,9 @@
-import * as React from "react";
 import styled from "styled-components";
 
-interface UpdateSoonCardProps {
-  card: {};
-  img: string;
-  title: string;
-  description: string;
-}
-
-const Card = styled.div`
-  position: relative;
+export const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover #ContentClose {
     opacity: 1;
@@ -29,7 +23,7 @@ const Card = styled.div`
     transform: translateY(0);
   }
 `;
-const FaceClose = styled.div`
+export const FaceClose = styled.div`
   width: 300px;
   height: 200px;
   transition: 0.5s;
@@ -41,7 +35,7 @@ const FaceClose = styled.div`
   z-index: 1;
   transform: translateY(100px);
 `;
-const ContentClose = styled.div`
+export const ContentClose = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,17 +43,17 @@ const ContentClose = styled.div`
   opacity: 0.2;
   transition: 0.5s;
 `;
-const Image = styled.img`
+export const Image = styled.img`
   width: 100px;
   height: 100px;
 `;
-const Title = styled.h3`
+export const Title = styled.h3`
   margin: 10px 0 0;
   color: #fff;
   text-align: center;
   font-size: 1.5em;
 `;
-const FaceOpen = styled.div`
+export const FaceOpen = styled.div`
   width: 300px;
   height: 200px;
   transition: 0.5s;
@@ -72,11 +66,11 @@ const FaceOpen = styled.div`
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   transform: translateY(-100px);
 `;
-const ContentOpen = styled.div``;
-const Description = styled.p`
+export const ContentOpen = styled.div``;
+export const Description = styled.p`
   font-size: 0.9em;
 `;
-const ReadMoreButton = styled.button`
+export const ReadMoreButton = styled.button`
   margin: 15px 0 0;
   display: inline-block;
   text-decoration: none;
@@ -91,28 +85,3 @@ const ReadMoreButton = styled.button`
     cursor: pointer;
   }
 `;
-
-const UpdateSoonCard: React.FC<UpdateSoonCardProps> = ({
-  img,
-  title,
-  description,
-}: UpdateSoonCardProps) => {
-  return (
-    <Card>
-      <FaceClose id="FaceClose">
-        <ContentClose id="ContentClose">
-          <Image src={img} id="Image" />
-          <Title>{title}</Title>
-        </ContentClose>
-      </FaceClose>
-      <FaceOpen id="FaceOpen">
-        <ContentOpen>
-          <Description>{description}</Description>
-          <ReadMoreButton>Read More</ReadMoreButton>
-        </ContentOpen>
-      </FaceOpen>
-    </Card>
-  );
-};
-
-export default UpdateSoonCard;
