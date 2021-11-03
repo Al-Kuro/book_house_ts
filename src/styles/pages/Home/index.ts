@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "../../../responsive";
 
 export const Container = styled.div`
   display: flex;
@@ -9,4 +10,8 @@ export const Container = styled.div`
 
 export const UpdateTitle = styled.h1`
   margin-top: 100px;
+
+  ${media.mobile(`
+    margin-top: 40px;
+  `)}
 `;

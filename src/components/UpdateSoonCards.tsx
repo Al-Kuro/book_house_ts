@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { updateSoonCard } from "../fakeData/data";
 import { Container } from "../styles/UpdateSoonCards";
-import UpdateSoonItem from "./UpdateSoonCards";
+import UpdateSoonItem from "./UpdateSoonItem";
 
 interface UpdateSoonCardsProps {}
 

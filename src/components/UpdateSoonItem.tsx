@@ -12,7 +12,8 @@ import {
 } from "../styles/UpdateSoonItem";
 
 interface UpdateSoonItemProps {
-  card: {};
+  key: number;
+  card: { id: number; img: string; title: string; description: string };
   img: string;
   title: string;
   description: string;

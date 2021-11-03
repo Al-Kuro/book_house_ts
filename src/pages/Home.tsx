@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import styled from "styled-components";
 import BookCards from "../components/BookCards";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";

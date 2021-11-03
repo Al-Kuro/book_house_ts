@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import media from "../../responsive";
+import menu from "../../images/icons/iconsToggleMenu/menu.svg";
 
 export const Container = styled.header`
   margin-top: 10px;
@@ -10,6 +12,14 @@ export const Container = styled.header`
   background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   border: 1px solid #fff;
+
+  ${media.mobile(`
+    width: 95%;
+    flex-direction: column;
+    padding: 1px;
+    border-radius: initial;
+    border: initial;
+    `)}
 `;
 
 export const Left = styled.div`
@@ -19,21 +29,37 @@ export const Left = styled.div`
   align-items: center;
 `;
 
-export const LogoUrl = styled.a`
-  position: relative;
-  left: -50px;
-`;
-export const LogoImage = styled.img`
-  max-width: 150px;
-  max-height: 150px;
-`;
+export const Title = styled.h1``;
 
 export const Center = styled.div`
   flex: 1;
   display: flex;
 `;
 
-export const ToggleMenu = styled.div``;
+interface ToggleMenuProps {
+  toggleMenu: boolean;
+  onClick: () => void;
+}
+
+export const ToggleMenu = styled.div<ToggleMenuProps>`
+  ${media.mobile(`
+  position: absolute;
+  top: -3px;
+  left: -97px;
+  width: 50px;
+  height: 50px;
+  background: url(${menu});
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  `)}/*.active {
+    background: #fff url(${menu});
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }*/
+`;
 
 export const Menu = styled.nav`
   position: relative;
@@ -52,6 +78,8 @@ export const MenuLink = styled.a`
     border-radius: 10px;
     cursor: pointer;
   }
+
+  ${media.mobile(`display: none;`)}
 `;
 
 export const Right = styled.div`
@@ -59,6 +87,9 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  ${media.mobile(`
+  `)}
 `;
 
 export const MenuItemContainer = styled.div`
@@ -67,6 +98,11 @@ export const MenuItemContainer = styled.div`
   align-items: center;
   position: relative;
   left: -60px;
+
+  ${media.mobile(`
+    flex-direction: column;
+    left: -30px;
+  `)}
 `;
 
 export const MenuItem = styled.a`
@@ -82,12 +118,22 @@ export const MenuItem = styled.a`
     border-radius: 10px;
     cursor: pointer;
   }
+
+  ${media.mobile(`
+    display: none;
+  `)}
 `;
 
 export const SearchContainer = styled.div`
   position: relative;
   width: 300px;
   height: 40px;
+
+  ${media.mobile(`
+    width: 280px;
+    height: 30px;
+    margin-bottom: 5px;
+  `)}
 `;
 
 export const Input = styled.input`
